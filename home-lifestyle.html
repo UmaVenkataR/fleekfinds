@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Fleek Finds</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/productdetails.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FleekyFinds</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="checkout.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="product-container">
+        <div class="product-breadcrumb">
+            <a href="index.html">Home</a> / 
+            <a href="products.html">Products</a> / 
+            <span class="current-product">Product Name</span>
+        </div>
+
+        <div class="product-wrapper">
+            <div class="product-gallery">
+                <div class="featured-image">
+                    <img id="featured" src="assets/images/home1.png" alt="Product Image">
+                    <div class="image-zoom-lens"></div>
+                </div>
+                <div class="thumbnail-container">
+                    <button class="scroll-btn left"><i class="fas fa-chevron-left"></i></button>
+                    <div class="thumbnails">
+                        <img src="assets/images/home1.png" onclick="changeImage(this)" class="active" alt="Product Thumbnail 1">
+                        <img src="assets/images/home2.png" onclick="changeImage(this)" alt="Product Thumbnail 2">
+                        <img src="assets/images/home3.png" onclick="changeImage(this)" alt="Product Thumbnail 3">
+                        <img src="assets/images/home4.png" onclick="changeImage(this)" alt="Product Thumbnail 4">
+                    </div>
+                    <button class="scroll-btn right"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <div class="product-header">
+                    <h1 class="product-title">Home & Lifestyle</h1>
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span>(4.5/5) - 128 Reviews</span>
+                    </div>
+                </div>
+
+                <div class="product-price">
+                    <div class="price-tag">
+                        <span class="original-price">$599.99</span>
+                        <span class="discounted-price">$299.99</span>
+                        <span class="discount-badge">50% OFF</span>
+                    </div>
+                    <div class="stock-info in-stock">
+                        <i class="fas fa-check-circle"></i> In Stock
+                    </div>
+                </div>
+
+                <div class="product-options">
+
+                    <div class="quantity-selection">
+                        <h3>Quantity</h3>
+                        <div class="quantity-controls">
+                            <button onclick="decrementQuantity()">-</button>
+                            <input type="number" id="quantity" value="1" min="1" max="10">
+                            <button onclick="incrementQuantity()">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button class="add-to-cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        Add to Cart
+                    </button>
+                    <button class="buy-now">
+                        <i class="fas fa-bolt"></i>
+                        Buy Now
+                    </button>
+                    <button class="wishlist-btn">
+                        <i class="far fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="product-features">
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <span>Free Shipping</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-undo"></i>
+                        <span>30-Day Returns</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Secure Payment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-details-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="description">Description</button>
+                <button class="tab-btn" data-tab="specifications">Specifications</button>
+                <button class="tab-btn" data-tab="reviews">Reviews</button>
+            </div>
+            <div class="tab-content active" id="description">
+                An enchantingly eccentric shape made of a metal frame in a matte brown finish with an acrylic diffuser, this dimmable LED table lamp is an absolute must-have for spaces with modern design sensibilities. With a built-in LED light that can be dimmed using the remote control unit that comes with this piece, it's a perfect dimmable table lamp for study tables, work desks, or countertops around the place! The light switches between warm white, cool white, and natural white when it is turned on and off in quick succession. The brightness of the light can be adjusted via remote control as well. Let this brown dimmable table lamp work its magic on your space.            </div>
+            <div class="tab-content" id="specifications">
+                Overall Dimensions-
+                Height: 18"
+                Length: 8"
+                Width: 4"
+                
+                Base Dimension-
+                Height: 1"
+                Length: 8"
+                Width: 4"            </div>
+            <div class="tab-content" id="reviews">
+                <!-- Reviews content -->
+            </div>
+        </div>
+
+        <div class="related-products">
+            <h2>You May Also Like</h2>
+            <div class="products-slider">
+                <!-- Related products will be dynamically added here -->
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/productdetails.js"></script>
+</body>
+</html>

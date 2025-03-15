@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Fleek Finds</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">FleekyFinds</div>
+        <div class="checkout-progress">
+            <div class="progress-step completed">
+                <div class="step-icon"><i class="fas fa-shopping-cart"></i></div>
+                <div class="step-label">Cart Review</div>
+            </div>
+            <div class="progress-bar completed"></div>
+            <div class="progress-step completed">
+                <div class="step-icon"><i class="fas fa-address-card"></i></div>
+                <div class="step-label">Shipping</div>
+            </div>
+            <div class="progress-bar"></div>
+            <div class="progress-step active">
+                <div class="step-icon"><i class="fas fa-credit-card"></i></div>
+                <div class="step-label">Payment</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="payment-container">
+        <div class="payment-content">
+            <div class="payment-methods">
+                <h2>Select Payment Method</h2>
+                <div class="payment-options">
+                    <div class="payment-option active" data-form="card-form">
+                        <input type="radio" name="payment" id="card" checked>
+                        <label for="card">
+                            <i class="fas fa-credit-card"></i>
+                            Credit/Debit Card
+                            <div class="card-types">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-form="paypal-form">
+                        <input type="radio" name="payment" id="paypal">
+                        <label for="paypal">
+                            <i class="fab fa-paypal"></i>
+                            PayPal
+                            <span class="promo-tag">Get 5% cashback</span>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-form="gpay-form">
+                        <input type="radio" name="payment" id="gpay">
+                        <label for="gpay">
+                            <i class="fab fa-google-pay"></i>
+                            Google Pay
+                            <span class="promo-tag">Fast Checkout</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="payment-forms">
+                    <div id="card-form" class="active-form">
+                        <div class="card-preview">
+                            <div class="card-front">
+                                <div class="card-chip"></div>
+                                <div class="card-type">
+                                    <i class="fab fa-cc-visa"></i>
+                                </div>
+                                <div class="card-number" id="preview-number">•••• •••• •••• ••••</div>
+                                <div class="card-info">
+                                    <div class="card-holder">
+                                        <span class="label">Card Holder</span>
+                                        <span id="preview-name">YOUR NAME</span>
+                                    </div>
+                                    <div class="card-expiry">
+                                        <span class="label">Expires</span>
+                                        <span id="preview-expiry">MM/YY</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="payment-form">
+                            <div class="form-group">
+                                <input type="text" id="card-number" required maxlength="19" placeholder="1234 5678 9012 3456">
+                                <label for="card-number">Card Number</label>
+                                <i class="card-icon fab fa-cc-visa"></i>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="card-holder" required placeholder="John Doe">
+                                <label for="card-holder">Card Holder Name</label>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <input type="text" id="expiry" required maxlength="5" placeholder="MM/YY">
+                                    <label for="expiry">Expiry Date</label>
+                                </div>
+                                <div class="form-group cvv-group">
+                                    <input type="password" id="cvv" required maxlength="3" placeholder="123">
+                                    <label for="cvv">CVV</label>
+                                    <i class="fas fa-question-circle cvv-help" title="3-digit security code on the back of your card"></i>
+                                </div>
+                            </div>
+                            <div class="save-card">
+                                <input type="checkbox" id="save-card-info">
+                                <label for="save-card-info">Save card for future payments</label>
+                            </div>
+                            <button type="submit" class="pay-btn">
+                                <i class="fas fa-lock"></i>
+                                Pay Securely
+                                <span class="amount">$99.99</span>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div id="paypal-form" class="payment-form">
+                        <div class="paypal-content">
+                            <img src="assets/images/paypal-logo.png" alt="PayPal">
+                            <p>Click below to login to your PayPal account</p>
+                            <button class="paypal-btn">Continue with PayPal</button>
+                        </div>
+                    </div>
+
+                    <div id="gpay-form" class="payment-form">
+                        <div class="gpay-content">
+                            <img src="assets/images/gpay-logo.png" alt="Google Pay">
+                            <p>Click below to pay with Google Pay</p>
+                            <button class="gpay-btn">Pay with Google Pay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-items">
+                    <!-- Items will be dynamically added here -->
+                </div>
+                <div class="summary-totals">
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span class="subtotal">$89.99</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Shipping</span>
+                        <span class="shipping">$9.99</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax</span>
+                        <span class="tax">$8.99</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span class="total-amount">$108.97</span>
+                    </div>
+                </div>
+                <div class="secure-checkout">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Secure Checkout</p>
+                    <div class="security-badges">
+                        <img src="assets/images/ssl-badge.png" alt="SSL Secure">
+                        <img src="assets/images/pci-badge.png" alt="PCI Compliant">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="scripts/payment.js"></script>
+</body>
+</html>
