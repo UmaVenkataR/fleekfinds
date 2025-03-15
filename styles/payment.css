@@ -1,0 +1,337 @@
+:root {
+    --primary-color: #007bff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --success-color: #28a745;
+    --error-color: #dc3545;
+}
+
+.payment-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    color: var(--text-color);
+}
+
+.payment-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+}
+
+/* Payment Methods */
+.payment-methods {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.payment-options {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.payment-option {
+    position: relative;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.payment-option.active {
+    border-color: var(--primary-color);
+}
+
+.payment-option label {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    cursor: pointer;
+    gap: 1rem;
+}
+
+.payment-option i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.card-types {
+    margin-left: auto;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.promo-tag {
+    margin-left: auto;
+    background: #e8f4ff;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* Card Preview */
+.card-preview {
+    background: linear-gradient(135deg, #0a2e88, #0e4baf);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    position: relative;
+    min-height: 200px;
+}
+
+.card-chip {
+    width: 50px;
+    height: 40px;
+    background: linear-gradient(135deg, #ffd700, #ffa500);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.card-number {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-holder, .card-expiry {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+}
+
+/* Form Styling */
+.form-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    background: white;
+    padding: 0 0.5rem;
+    color: #666;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    top: -0.5rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.cvv-help {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    color: #666;
+    cursor: help;
+}
+
+/* Pay Button */
+.pay-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+}
+
+.pay-btn:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Order Summary */
+.order-summary {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 2rem;
+}
+
+.summary-items {
+    margin: 1.5rem 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.summary-row.total {
+    border-top: 2px solid var(--border-color);
+    border-bottom: none;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.secure-checkout {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+}
+
+.secure-checkout i {
+    font-size: 2rem;
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.security-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.security-badges img {
+    height: 40px;
+    opacity: 0.7;
+}
+
+/* Success Modal */
+.success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.success-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    animation: slideIn 0.3s ease;
+}
+
+.success-content i {
+    font-size: 4rem;
+    color: var(--success-color);
+    margin-bottom: 1rem;
+}
+
+.success-content button {
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Tooltip */
+.tooltip {
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.payment-form {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.payment-form.active-form {
+    display: block;
+    opacity: 1;
+}
+
+#card-form {
+    display: block; /* Show card form by default */
+}
+
+.payment-option {
+    cursor: pointer;
+}
+
+.payment-option input[type="radio"] {
+    cursor: pointer;
+}
+
+.payment-option.active {
+    border-color: var(--primary-color);
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,424 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: white;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #0a1b2f;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: emoji;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #f4a261;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    text-align: left;
+    background: #0a1b2f;
+}
+.hero-content {
+    max-width: 50%;
+    text-align: center;
+}
+.hero-content h1 {
+    font-size: 36px;
+}
+.hero-content p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+.btn {
+    display: inline-block;
+    background-color: #f4a261;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.hero-images {
+    display: flex;
+    gap: 240px;
+    margin-left: 116px;
+}
+.hero-images img {
+    width: 15%;
+}
+.collection {
+    text-align: center;
+    padding: 50px;
+    background-color: whitesmoke;
+}
+.collection h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    color:black;
+}
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.product {
+    background: #EEEDEC;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+}
+.product img {
+    width: 100%;
+    border-radius: 10px;
+}
+.product a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #f4a261;
+    font-weight: bold;
+}
+.landing {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+background-color: #0C2238;
+}
+
+.content {
+text-align: center;
+margin-left: 500px;
+}
+
+.logo {
+width: 150px;
+height: auto;
+margin-bottom: 20px;
+}
+
+h1 {
+font-size: 2rem;
+}
+
+p {
+font-size: 1rem;
+margin-bottom: 20px;
+}
+
+.shop-btn {
+background-color: #c9a76a;
+color: #000;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+font-size: 1rem;
+border-radius: 5px;
+}
+
+.shop-btn:hover {
+background-color: #b08e54;
+}
+
+.product-image img {
+width: 300px;
+height: auto;
+}
+.logo-text {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+.fashion-favorites {
+text-align: center;
+margin: 50px 0;
+background-color: white;
+}
+
+.fashion-favorites h2 {
+font-size: 2rem;
+color: #333;
+}
+
+.fashion-favorites p {
+font-size: 1.2rem;
+color: #666;
+margin-bottom: 20px;
+}
+
+.fashion-gallery {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+}
+
+.fashion-gallery img {
+width: 220px;
+height: auto;
+border-radius: 10px;
+transition: transform 0.3s ease-in-out;
+}
+
+.fashion-gallery img:hover {
+transform: scale(1.05);
+}
+
+.unlock-section {
+text-align: center;
+margin: 50px 0;
+}
+
+.unlock-header {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
+margin-bottom: 20px;
+}
+
+.unlock-header h2 {
+font-size: 2rem;
+color: #333;
+font-style: italic;
+}
+
+.explore-btn {
+border: 1px solid #333;
+background: transparent;
+padding: 10px 20px;
+font-size: 1rem;
+cursor: pointer;
+border-radius: 20px;
+transition: all 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+background: #333;
+color: #fff;
+}
+
+.unlock-gallery {
+display: flex;
+justify-content: center;
+gap: 20px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.unlock-item {
+background: #f5f3ee;
+padding: 20px;
+border-radius: 10px;
+width: 300px;
+text-align: center;
+position: relative;
+}
+
+.unlock-item img {
+width: 100%;
+border-radius: 10px;
+}
+
+.unlock-item h3 {
+font-size: 1.2rem;
+margin-top: 10px;
+color: #333;
+}
+
+.unlock-item p {
+font-size: 1rem;
+color: #666;
+}
+
+.unlock-item::before {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+width: 40px;
+height: 40px;
+background: #c29d5c;
+}
+.secure-payments {
+text-align: center;
+background-color: white;
+padding: 40px 20px;
+}
+
+.secure-payments h2 {
+font-size: 24px;
+color: #2c3e50;
+font-style: italic;
+}
+
+.secure-payments p {
+font-size: 16px;
+color: #555;
+max-width: 600px;
+margin: 10px auto 20px;
+}
+
+.purchase-btn {
+background-color: #2c3e50;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+border-radius: 5px;
+}
+
+.purchase-btn:hover {
+background-color: #1a252f;
+}
+
+.elevate-shopping {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #D7CBBD;
+padding: 40px 20px;
+}
+
+.shopping-content {
+display: flex;
+align-items: center;
+gap: 40px;
+max-width: 1000px;
+}
+
+.shopping-image img {
+width: 250px;
+border-radius: 10px;
+}
+
+.shopping-text {
+max-width: 500px;
+}
+
+.shopping-text h2 {
+font-size: 24px;
+color: #2c3e50;
+font-style: italic;
+}
+
+.shopping-text p {
+font-size: 16px;
+color: #555;
+margin: 10px 0 20px;
+}
+
+.shop-btn {
+background-color: #2c3e50;
+color: white;
+padding: 10px 20px;
+border: none;
+cursor: pointer;
+font-size: 16px;
+border-radius: 5px;
+}
+
+.shop-btn:hover {
+background-color: #1a252f;
+}
+footer {
+background-color: #333;
+color: white;
+padding: 20px 0;
+margin-top: auto;
+}
+
+.footer-content {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+
+.footer-content div {
+margin: 10px;
+flex: 1 1 200px;
+}
+
+.footer-content h3 {
+margin-bottom: 10px;
+}
+
+.footer-content p, .footer-content a {
+color: white;
+text-decoration: none;
+}
+
+.footer-content a:hover {
+text-decoration: underline;
+}
+
+.newsletter input {
+padding: 5px;
+margin-right: 5px;
+}
+
+.newsletter button {
+padding: 5px 10px;
+background-color: #555;
+color: white;
+border: none;
+cursor: pointer;
+}
+
+.newsletter button:hover {
+background-color: #777;
+}
+
+.payment-icons, .social-icons {
+display: flex;
+gap: 10px;
+}
+
+.payment-icons i, .social-icons a {
+font-size: 24px;
+color: white;
+}
+
+.social-icons a:hover {
+color: #00aced; /* Twitter blue for example */
+}
+
+.footer-bottom {
+text-align: center;
+margin-top: 20px;
+border-top: 1px solid #555;
+padding-top: 10px;
+}
+
+.footer-links a {
+margin: 0 15px;
+color: white;
+text-decoration: none;
+}
+
+.footer-links a:hover {
+text-decoration: underline;
+}
